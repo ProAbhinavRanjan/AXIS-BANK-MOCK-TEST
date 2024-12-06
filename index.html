@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axis Bank - Home</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #AE275f;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        header .logo img {
+            width: 150px;
+            height: auto;
+        }
+        nav{border-radius: 10px;}
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ff9900;
+        }
+
+        /* Main Content Section */
+        .main-content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+
+        .service-item h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 14px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #AE275f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        .social-links a:hover {
+            color: #ff9900;
+        }
+        .slider {
+  width: 100%;
+  height: 510px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.slider img {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+  
+
+
+.slider img:first-child {
+  z-index: 1;
+}
+
+.slider img:nth-child(2) {
+    z-index: 0;
+}
+.navigation-button {
+  text-align: center;
+  position: relative;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;}
+  .imga{border-radius: 10px;}
+  .op {
+            background-color: #AE275f;
+            color: white;
+           font-size: 35px;
+           text-align: center;
+           border-radius: 10px;
+           padding-bottom: 10px;
+           padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       var imgs = document.querySelectorAll('.slider img');
+var dots = document.querySelectorAll('.dot');
+var currentImg = 0; // index of the first image 
+const interval = 3000; // duration(speed) of the slide
+function changeSlide(n) {
+  for (var i = 0; i < imgs.length; i++) { // reset
+    imgs[i].style.opacity = 0;
+    dots[i].className = dots[i].className.replace(' active', '');
+  }
+
+  currentImg = n;
+
+  imgs[currentImg].style.opacity = 1;
+  dots[currentImg].className += ' active';
+}
+var timer = setInterval(changeSlide, interval);
+currentImg = (currentImg + 1) % imgs.length; // update the index number
+
+if (n != undefined) {
+    clearInterval(timer);
+    timer = setInterval(changeSlide, interval);
+    currentImg = n;
+}
+
+       </script>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="AXISbank.logo-bg.jpeg">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Branches</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <h1>Welcome to Axis Bank Index Portal</h1>
+        <p>Your trusted financial partner for over two decades. Explore our services and enjoy banking with us.<br>We provide you over 1k+ options for banking and internet banking, with high security.</p>
+        
+        <div class="services">
+            <div class="service-item">
+                <h2>Personal Banking</h2>
+                <p>Enjoy the best personal banking services tailored to your needs.</p>
+            </div>
+            <div class="service-item">
+                <h2>Internet Banking</h2>
+                <p>Enjoy the best internet banking experienceto your needs.</p>
+            </div>
+            <div class="service-item">
+                <h2>Finance Banking</h2>
+                <p>Enjoy the best finance banking services tailored to your needs.</p>
+            </div>
+            <div class="service-item">
+                <h2>Business Banking</h2>
+                <p>Comprehensive solutions for your business growth and financial success.</p>
+            </div>
+            <div class="service-item">
+                <h2>Other Services</h2>
+                <p>Get customized banking experience at Axis Bank Custon-Banking Option.</p>
+            </div>
+        </div><br>  </section>
+        <section>
+        <div class="op">Entertainment and Services</div><br>
+        <div class="slider">
+            <img id="img-1" class="imga" src="fam1.jpg" alt="Image 1"/>
+            <img id="img-2" class="imga" src="AXISbank.logo-bg.jpeg" alt="Image 2"/>
+            <img id="img-3" class="imga" src="AXISbank.logo-bg.jpeg" alt="Image 3"/>
+          </div>
+          <div class="navigation-button">
+            <span class="dot active" onclick="changeSlide(0)"></span>
+            <span class="dot" onclick="changeSlide(1)"></span>
+            <span class="dot" onclick="changeSlide(2)"></span>
+          </div></section>
+  
+
+    <!-- Footer Section -->
+    <footer>
+        <p>2024 ABHINAV RANJAN's Rights Reserved &copy; <br>Axis Banks Name is just used as a mock for educational purpose.<br></p>
+        <div class="social-links"><BR>
+            SOCIAL LINKS: 
+            <a href="FACEBOOK.COM">Facebook</a>
+            <a href="twitter.com">Twitter</a>
+            <a href="linkedin.com">LinkedIn</a>
+            <a href="instagram.com">InstaGram</a>
+        </div>
+    </footer>
+</body>
+</html>
